@@ -1,0 +1,42 @@
+.idxH1{
+    color:  #062b67;
+    font-family:'Antonio', sans-serif;
+    font-size: x-large;
+    padding: 10px;
+    background-color: #dee8f4;
+}
+
+.container{
+    width:1500px;
+    display:flex;
+    align-items: center;
+}
+.container img{
+    height:450px;
+    width:450px;
+    margin-right:50px;
+    margin-left: 50px;
+}
+.idxB{
+    color:#5497e6;
+    font-family:'Antonio', sans-serif;
+    font-size:40px;
+}
+
+.idxL{
+    font-family:'Antonio', sans-serif;
+    border: 1px solid;
+    border-color: #5497e6;
+    padding: 15px;
+    font-size:20px;
+    align-self: center;
+    margin-left:85px;
+    text-decoration: none;
+    color: #5497e6;
+}
+
+.idxL:hover{
+    color : white;
+    background-color: #5497e6;
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+{%extends 'layout.html'%}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'result.css' %}">
+{% endblock head %} 
+{%block body%}
+
+{%if res%}
+<center>
+<img src = "{% static 'check.gif' %}" alt = "img">
+<h1>GOOD LOAN</h1>
+<br>
+<br>
+<p class = "resP">Based upon the Information provided this Loan is higly likely to be a Good loan and have all its payments done on time.</p>
+</center>
+{%else%}
+<center>
+<img src = "{% static 'alert.gif' %}" alt = "img">
+<h1>BAD LOAN</h1>
+<br>
+<br>
+<p class = "resP">Based upon the Information provided this Loan is higly likely to be a Bad Loan and may default on payments.</p>
+</center>
+{%endif%}
+<br>
+<br>
+<div class = "resL">
+    <a class = "idxL" href="{% url 'index'%}">Home</a>
+<a class = "idxL" href="{% url 'PredictView'%}">Make Another Prediction</a>
+</div>
+{%endblock%}
