@@ -1,1 +1,1 @@
-web : guniocon technocolabProject.wsgi --log-file -
+web : gunicorn technocolabProject.wsgi --log-file -
