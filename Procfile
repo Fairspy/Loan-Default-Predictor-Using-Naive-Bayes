@@ -1,1 +1,1 @@
-web: gunicorn technocolabProject.wsgi
+web : gunicorn technocolabProject.wsgi --log-file -
