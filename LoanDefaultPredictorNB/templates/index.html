@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock head %} 
+
+{% block body %}
+<b><span class = "idxH1">DefaultPredictor</span></b>
+<div class = "container">
+<p class = "idxB">A Predictive model to predict whether a Loan is 'Good' or 'Bad' i.e whether its more likely to default or will have timely payments</p>
+<img src = "{% static 'index.png' %}" alt = "img">
+</div>
+
+<a class = "idxL" href="{% url 'PredictView'%}">Make a Prediction</a>
+
+{%endblock%}

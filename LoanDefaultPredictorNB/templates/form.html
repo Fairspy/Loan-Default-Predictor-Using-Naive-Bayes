@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{%load static%}
+{% block head %}
+<link rel="stylesheet" href="{% static 'form.css' %}">
+{% endblock head %} 
+{% block body %}
+<center>
+<h3>Enter the Details to Get Prediction</h3> 
+</center>
+<div class = "fR">
+    <form method='POST'>
+        {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class = fLab>Days Delinquent</label>
+            {{ form.LoanCurrentDaysDelinquent }}
+                </div>
+                <div class = "form-group col-md-6">
+                    <label class = fLab>Customer Principal Payments</label>
+            {{ form.LP_CustomerPrincipalPayments }}
+</div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label class = fLab>Gross Principal Loss</label>
+            {{ form.LP_GrossPrincipalLoss }}
+        </div>
+        <div class = "form-group col-md-6">
+            <label class = fLab>Customer Payments</label>
+            {{ form.LP_CustomerPayments }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label class = fLab>Interest and Fees</label>
+            {{ form.LP_InterestandFees }}
+            
+        </div>
+        <div class="form-group col-md-6">
+            <label class = fLab>Service Fees</label>
+            {{ form.LP_ServiceFees }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label class = fLab>Monthly Loan Payment</label>
+            {{ form.MonthlyLoanPayment }}
+        </div>
+        <div class="form-group col-md-6">
+            <label class = fLab>Available Credit on Bank Card</label>
+            {{ form.AvailableBankcardCredit }}
+        </div>
+    </div>
+    <div class = "form-row">
+        <div class = "form-group col-md-6">
+    <label class = fLab>Revolving Credit Balance</label>
+            {{ form.RevolvingCreditBalance}}
+        </div>
+        </div>
+        <button class = "formBtn" type="submit" value="submit">Make The Prediction</button>
+    </form>
+    </div>
+
+    {% endblock %}
