@@ -1,0 +1,1 @@
+web : guniocon technocolabProject.wsgi --log-file -
