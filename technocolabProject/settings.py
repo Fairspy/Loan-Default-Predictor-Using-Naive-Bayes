@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-!-nv)#ydle7b)4+ryyh2-fxpv4p!zc-*h_+$$fsumxsz@3gf-t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['naivebayes-techno.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['naivebayes-techno.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -45,10 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    
-    'whitenoise.mddleware.WhiteNoiseMiddleware',
-
-
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,7 +59,7 @@ ROOT_URLCONF = 'technocolabProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = 'static/'
 
